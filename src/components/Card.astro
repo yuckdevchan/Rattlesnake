@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon'
+
 interface Props {
   title: string;
   href: string;
@@ -11,9 +13,7 @@ const { href, title, icon } = Astro.props;
 <li class="link-card">
   <a href={href}>
     <h2 class="">
-      <!-- Use the 'icon' field to render the SVG icon -->
-      <span class="icon">{icon}</span>
-      {title}
+      <Icon class="icon" name={icon} />{title}
     </h2>
   </a>
 </li>
@@ -49,6 +49,8 @@ const { href, title, icon } = Astro.props;
     margin-right: 0.5rem;
     display: inline-block;
     vertical-align: middle;
+    height: 2.2rem; /* Adjust the height as needed to match your text */
+    fill: currentColor; /* This sets the icon color to match the text color */
   }
   p {
     margin-top: 0.5rem;

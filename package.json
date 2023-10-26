@@ -1,14 +1,19 @@
 {
-  "name": "rattlesnake",
+  "name": "",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build"
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@astro/check": "^0.2.1",
+    "@astrojs/check": "^0.2.1",
     "astro": "^3.3.4",
+    "astro-icon": "^0.8.1",
+    "tailwind": "^4.0.0",
     "typescript": "^5.2.2"
   }
 }

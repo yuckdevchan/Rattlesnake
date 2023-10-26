@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import '../components/global.css';
+import { Icon } from 'astro-icon'
 ---
 
 <Layout title="Rattlesnake - Music in your Hands.">
@@ -12,26 +13,36 @@ import '../components/global.css';
     <div class="w-2/3 p-4" style="max-width: 20rem;"> <!-- Adjust the max-width as needed -->
       <!-- Right side content for vertically stacked cards -->
       <ul role="list" class="space-y-4">
-		<Card
-		href="/"
-		title="Home"
-	  	/>
+        <Card
+          href="/"
+          title="Home"
+          icon="mdi:home-outline"
+        />
         <Card
           href="https://astro.build/integrations/"
           title="Artists"
+          icon="mdi:artist-outline"
         />
         <Card
           href="https://astro.build/themes/"
           title="Albums"
+          icon="mdi:album"
         />
         <Card
           href="https://astro.build/chat/"
           title="Songs"
+          icon="mdi:music-note-eighth"
         />
-		<Card
-		href="https://astro.build/chat/"
-		title="Settings"
-	  	/>
+        <Card
+          href="https://astro.build/chat/"
+          title="Settings"
+          icon="mdi:cog"
+        />
+        <Card
+          href="http://localhost:8081"
+          title="Sonic Screwdriver"
+          icon="mdi:screwdriver"
+        />
       </ul>
     </div>
   </div>
