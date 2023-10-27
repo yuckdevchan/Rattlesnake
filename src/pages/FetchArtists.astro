@@ -1,0 +1,26 @@
+<script>
+  import axios from 'axios';
+
+  let artists = [];
+
+  async function fetchData() {
+    try {
+      const response = await axios.get('http://your-flask-server-url/'); // Replace with the actual URL of your Flask server
+      artists = response.data.artists; // Assuming your server returns a JSON object with an "artists" property
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+  // Fetch data when the component is initialized
+  fetchData();
+</script>
+
+<h1>Artists</h1>
+<ul>
+  <fragment>
+    {#each artists as artist, i}
+      <li key={i}>{artist}</li>
+    {/each}
+  </fragment>
+</ul>
